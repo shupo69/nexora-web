@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NEXORA | Tecnología que impulsa tu negocio</title>
+  <meta name="description" content="NEXORA ofrece soluciones de tecnología, desarrollo web, ciberseguridad, inteligencia artificial, automatización, soporte informático y redes.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050816;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 8, 22, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    nav {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #00aaff, #7b2cff);
+      box-shadow: 0 0 25px rgba(0,170,255,0.35);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #cbd5e1;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #4db8ff;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: #0066ff;
+      filter: blur(180px);
+      opacity: 0.18;
+      top: -150px;
+      right: -100px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #59c7ff;
+      font-weight: bold;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(45px, 8vw, 85px);
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, #4dc7ff, #8d5cff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: #aebbd0;
+      font-size: 19px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 23px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #008cff, #713cff);
+      box-shadow: 0 10px 30px rgba(0,140,255,0.25);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #91a0b8;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.055),
+        rgba(255,255,255,0.015)
+      );
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(77,199,255,0.35);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 23px;
+      background: linear-gradient(135deg, rgba(0,170,255,0.18), rgba(123,44,255,0.18));
+      border: 1px solid rgba(77,199,255,0.18);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #93a1b8;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #9eabc0;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      display: grid;
+      gap: 15px;
+    }
+
+    .feature {
+      padding: 17px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .contact-box {
+      text-align: center;
+      padding: 70px 30px;
+      border-radius: 25px;
+      background:
+        radial-gradient(circle at top right, rgba(0,170,255,0.2), transparent 40%),
+        radial-gradient(circle at bottom left, rgba(123,44,255,0.2), transparent 40%),
+        #0a1022;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact-box h2 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: #aebbd0;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      color: #718096;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+
+      .about h2,
+      .contact-box h2 {
+        font-size: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          <span class="logo-icon">N</span>
+          NEXORA
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Tecnología · Innovación · Seguridad
+          </span>
+
+          <h1>
+            Tecnología que
+            <span class="gradient">impulsa tu negocio.</span>
+          </h1>
+
+          <p>
+            En NEXORA desarrollamos soluciones tecnológicas modernas
+            para ayudar a empresas y profesionales a crecer, automatizar
+            procesos y proteger su negocio.
+          </p>
+
+          <div class="buttons">
+            <a href="#contacto" class="btn btn-primary">
+              Hablemos de tu proyecto
+            </a>
+
+            <a href="#servicios" class="btn btn-secondary">
+              Ver servicios
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Nuestros servicios</h2>
+          <p>Tecnología diseñada para las necesidades reales de tu negocio.</p>
+        </div>
+
+        <div class="services">
+
+          <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Diseño y desarrollo web</h3>
+            <p>
+              Creamos páginas web modernas, rápidas, adaptadas a móviles
+              y orientadas a conseguir resultados.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🛡️</div>
+            <h3>Ciberseguridad</h3>
+            <p>
+              Protección, análisis y buenas prácticas para reducir
+              riesgos y proteger la información de tu empresa.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🤖</div>
+            <h3>Inteligencia artificial</h3>
+            <p>
+              Incorporamos IA en procesos y herramientas para mejorar
+              productividad y ahorrar tiempo.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">⚡</div>
+            <h3>Automatización</h3>
+            <p>
+              Automatizamos tareas repetitivas para que puedas dedicar
+              más tiempo a lo realmente importante.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">💻</div>
+            <h3>Soporte informático</h3>
+            <p>
+              Asistencia técnica para ordenadores, sistemas,
+              aplicaciones y problemas tecnológicos.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🔗</div>
+            <h3>Redes y sistemas</h3>
+            <p>
+              Configuración y mantenimiento de redes, servidores,
+              conectividad y sistemas informáticos.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <div class="container">
+
+        <div class="about">
+
+          <div>
+            <span class="eyebrow">NEXORA</span>
+
+            <h2>
+              Tecnología sin complicaciones.
+            </h2>
+
+            <p>
+              Nuestro objetivo es acercar la tecnología a empresas,
+              profesionales y proyectos que quieren crecer.
+            </p>
+
+            <p>
+              Analizamos cada necesidad y desarrollamos soluciones
+              prácticas, modernas y escalables.
+            </p>
+          </div>
+
+          <div class="features">
+
+            <div class="feature">
+              <strong>✓ Soluciones adaptadas</strong><br>
+              Cada proyecto parte de las necesidades reales del cliente.
+            </div>
+
+            <div class="feature">
+              <strong>✓ Comunicación clara</strong><br>
+              Tecnología explicada de forma sencilla y transparente.
+            </div>
+
+            <div class="feature">
+              <strong>✓ Diseño moderno</strong><br>
+              Experiencias digitales preparadas para móvil y ordenador.
+            </div>
+
+            <div class="feature">
+              <strong>✓ Seguridad</strong><br>
+              La seguridad forma parte del proyecto desde el principio.
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="container">
+
+        <div class="contact-box">
+
+          <span class="eyebrow">¿Hablamos?</span>
+
+          <h2>
+            Lleva tu negocio al siguiente nivel.
+          </h2>
+
+          <p>
+            Cuéntanos qué necesitas y estudiaremos cómo podemos ayudarte.
+          </p>
+
+          <a
+            href="mailto:contacto@nexora.es"
+            class="btn btn-primary"
+          >
+            Contactar con NEXORA
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 NEXORA · Tecnología que impulsa tu negocio.
+    </div>
+  </footer>
+
+</body>
+</html>
