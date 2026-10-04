@@ -236,6 +236,142 @@
       color: #93a1b8;
     }
 
+    /* PLANES */
+
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      position: relative;
+      padding: 32px 25px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.055),
+        rgba(255,255,255,0.015)
+      );
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(77,199,255,0.35);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    }
+
+    .pricing-card.featured {
+      border-color: rgba(77,199,255,0.55);
+      box-shadow: 0 0 35px rgba(0,140,255,0.12);
+    }
+
+    .popular {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #008cff, #713cff);
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .pricing-card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+      padding-right: 80px;
+    }
+
+    .pricing-description {
+      color: #93a1b8;
+      min-height: 48px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .price {
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .price span {
+      font-size: 14px;
+      color: #91a0b8;
+      font-weight: normal;
+    }
+
+    .annual {
+      color: #59c7ff;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    .pricing-list {
+      list-style: none;
+      margin-bottom: 28px;
+      flex: 1;
+    }
+
+    .pricing-list li {
+      color: #cbd5e1;
+      font-size: 14px;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .pricing-list li:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-btn {
+      width: 100%;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .one-off {
+      margin-top: 45px;
+      text-align: center;
+      padding: 35px 25px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .one-off h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .one-off p {
+      color: #93a1b8;
+      margin-bottom: 20px;
+    }
+
+    .one-off-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .one-off-item {
+      padding: 10px 15px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.06);
+      color: #d7e0ed;
+      font-size: 13px;
+    }
+
     .about {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -293,12 +429,22 @@
       text-align: center;
     }
 
+    @media (max-width: 1050px) {
+      .pricing {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     @media (max-width: 800px) {
       .nav-links {
         display: none;
       }
 
       .services {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing {
         grid-template-columns: 1fr;
       }
 
@@ -330,6 +476,7 @@
 
         <ul class="nav-links">
           <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#precios">Precios</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
@@ -440,13 +587,194 @@
       </div>
     </section>
 
+    <section id="precios">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Planes NEXORA</h2>
+          <p>Soporte, tecnología y soluciones digitales adaptadas a tu negocio.</p>
+        </div>
+
+        <div class="pricing">
+
+          <div class="pricing-card">
+            <h3>🟢 NEXORA START</h3>
+            <p class="pricing-description">
+              Para autónomos y pequeños negocios.
+            </p>
+
+            <div class="price">
+              39 € <span>/mes</span>
+            </div>
+
+            <div class="annual">390 €/año</div>
+
+            <ul class="pricing-list">
+              <li>✓ Soporte técnico remoto</li>
+              <li>✓ Resolución de incidencias</li>
+              <li>✓ Asesoramiento informático</li>
+              <li>✓ Mantenimiento básico</li>
+              <li>✓ Optimización de equipos</li>
+              <li>✓ Asistencia técnica</li>
+            </ul>
+
+            <a href="#contacto" class="btn btn-secondary pricing-btn">
+              Elegir Start
+            </a>
+          </div>
+
+          <div class="pricing-card featured">
+
+            <span class="popular">MÁS ELEGIDO</span>
+
+            <h3>🔵 NEXORA PRO</h3>
+
+            <p class="pricing-description">
+              La opción ideal para pequeños negocios.
+            </p>
+
+            <div class="price">
+              69 € <span>/mes</span>
+            </div>
+
+            <div class="annual">690 €/año</div>
+
+            <ul class="pricing-list">
+              <li>✓ Todo lo incluido en START</li>
+              <li>✓ Mantenimiento preventivo</li>
+              <li>✓ Configuración y optimización</li>
+              <li>✓ Copias de seguridad</li>
+              <li>✓ Seguridad informática básica</li>
+              <li>✓ Soporte prioritario</li>
+              <li>✓ Asesoramiento tecnológico</li>
+            </ul>
+
+            <a href="#contacto" class="btn btn-primary pricing-btn">
+              Elegir Pro
+            </a>
+          </div>
+
+          <div class="pricing-card">
+
+            <h3>🟣 NEXORA BUSINESS</h3>
+
+            <p class="pricing-description">
+              Para empresas con mayores necesidades tecnológicas.
+            </p>
+
+            <div class="price">
+              119 € <span>/mes</span>
+            </div>
+
+            <div class="annual">1.190 €/año</div>
+
+            <ul class="pricing-list">
+              <li>✓ Todo lo incluido en PRO</li>
+              <li>✓ Gestión y mantenimiento de redes</li>
+              <li>✓ Mantenimiento web básico</li>
+              <li>✓ Automatización de tareas</li>
+              <li>✓ Soluciones con Inteligencia Artificial</li>
+              <li>✓ Supervisión tecnológica</li>
+              <li>✓ Consultoría informática</li>
+            </ul>
+
+            <a href="#contacto" class="btn btn-secondary pricing-btn">
+              Elegir Business
+            </a>
+          </div>
+
+          <div class="pricing-card">
+
+            <h3>⭐ NEXORA PREMIUM</h3>
+
+            <p class="pricing-description">
+              Soporte tecnológico integral para tu empresa.
+            </p>
+
+            <div class="price">
+              199 € <span>/mes</span>
+            </div>
+
+            <div class="annual">1.990 €/año</div>
+
+            <ul class="pricing-list">
+              <li>✓ Todo lo incluido en BUSINESS</li>
+              <li>✓ Soporte prioritario</li>
+              <li>✓ Mantenimiento integral</li>
+              <li>✓ Gestión de sistemas y equipos</li>
+              <li>✓ Seguridad informática avanzada</li>
+              <li>✓ Automatizaciones personalizadas</li>
+              <li>✓ Soluciones de IA para empresas</li>
+              <li>✓ Consultoría tecnológica personalizada</li>
+            </ul>
+
+            <a href="#contacto" class="btn btn-secondary pricing-btn">
+              Elegir Premium
+            </a>
+          </div>
+
+        </div>
+
+        <div class="one-off">
+
+          <h3>Servicios puntuales</h3>
+
+          <p>
+            ¿No necesitas una cuota mensual? También puedes contratar
+            servicios individuales.
+          </p>
+
+          <div class="one-off-grid">
+
+            <div class="one-off-item">
+              🌐 Web desde 399 €
+            </div>
+
+            <div class="one-off-item">
+              🛒 Tienda online desde 699 €
+            </div>
+
+            <div class="one-off-item">
+              🤖 IA y automatización desde 299 €
+            </div>
+
+            <div class="one-off-item">
+              🔐 Seguridad desde 199 €
+            </div>
+
+            <div class="one-off-item">
+              💻 Equipos desde 49 €
+            </div>
+
+            <div class="one-off-item">
+              🌐 Redes desde 79 €
+            </div>
+
+            <div class="one-off-item">
+              🛠️ Mantenimiento web desde 39 €/mes
+            </div>
+
+            <div class="one-off-item">
+              📞 Soporte desde 35 €/hora
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <section id="nosotros">
+
       <div class="container">
 
         <div class="about">
 
           <div>
-            <span class="eyebrow">NEXORA</span>
+
+            <span class="eyebrow">
+              NEXORA
+            </span>
 
             <h2>
               Tecnología sin complicaciones.
@@ -461,6 +789,7 @@
               Analizamos cada necesidad y desarrollamos soluciones
               prácticas, modernas y escalables.
             </p>
+
           </div>
 
           <div class="features">
@@ -488,15 +817,20 @@
           </div>
 
         </div>
+
       </div>
+
     </section>
 
     <section id="contacto">
+
       <div class="container">
 
         <div class="contact-box">
 
-          <span class="eyebrow">¿Hablamos?</span>
+          <span class="eyebrow">
+            ¿Hablamos?
+          </span>
 
           <h2>
             Lleva tu negocio al siguiente nivel.
@@ -507,25 +841,28 @@
           </p>
 
           <a
-  href="https://wa.me/34677367321?text=Hola%20NEXORA,%20quiero%20información%20sobre%20vuestros%20servicios."
-  class="btn btn-primary"
-  target="_blank"
->
-  💬 Hablar por WhatsApp
-</a>
-          
+            href="https://wa.me/34677367321?text=Hola%20NEXORA,%20quiero%20información%20sobre%20vuestros%20servicios."
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            💬 Hablar por WhatsApp
+          </a>
 
         </div>
 
       </div>
+
     </section>
 
   </main>
 
   <footer>
+
     <div class="container">
       © 2026 NEXORA · Tecnología que impulsa tu negocio.
     </div>
+
   </footer>
 
 </body>
