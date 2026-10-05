@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>NEXORA | Tecnología que impulsa tu negocio</title>
-  <meta name="description" content="NEXORA ofrece soluciones de tecnología, desarrollo web, ciberseguridad, inteligencia artificial, automatización, soporte informático y redes.">
+
+  <meta name="description" content="NEXORA ofrece soluciones tecnológicas para empresas, autónomos y profesionales: desarrollo web, inteligencia artificial, automatización, ciberseguridad, redes y soporte informático.">
 
   <style>
     * {
@@ -40,8 +41,8 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(5, 8, 22, 0.92);
-      backdrop-filter: blur(12px);
+      background: rgba(5, 8, 22, 0.94);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
@@ -156,6 +157,7 @@
       border-radius: 10px;
       font-weight: bold;
       transition: 0.3s;
+      cursor: pointer;
     }
 
     .btn-primary {
@@ -223,7 +225,11 @@
       justify-content: center;
       margin-bottom: 20px;
       font-size: 23px;
-      background: linear-gradient(135deg, rgba(0,170,255,0.18), rgba(123,44,255,0.18));
+      background: linear-gradient(
+        135deg,
+        rgba(0,170,255,0.18),
+        rgba(123,44,255,0.18)
+      );
       border: 1px solid rgba(77,199,255,0.18);
     }
 
@@ -236,7 +242,9 @@
       color: #93a1b8;
     }
 
-    /* PLANES */
+    /* =========================
+       PLANES
+    ========================= */
 
     .pricing {
       display: grid;
@@ -372,6 +380,10 @@
       font-size: 13px;
     }
 
+    /* =========================
+       NOSOTROS
+    ========================= */
+
     .about {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -401,13 +413,25 @@
       border: 1px solid rgba(255,255,255,0.07);
     }
 
+    /* =========================
+       CONTACTO
+    ========================= */
+
     .contact-box {
       text-align: center;
       padding: 70px 30px;
       border-radius: 25px;
       background:
-        radial-gradient(circle at top right, rgba(0,170,255,0.2), transparent 40%),
-        radial-gradient(circle at bottom left, rgba(123,44,255,0.2), transparent 40%),
+        radial-gradient(
+          circle at top right,
+          rgba(0,170,255,0.2),
+          transparent 40%
+        ),
+        radial-gradient(
+          circle at bottom left,
+          rgba(123,44,255,0.2),
+          transparent 40%
+        ),
         #0a1022;
       border: 1px solid rgba(255,255,255,0.08);
     }
@@ -422,12 +446,20 @@
       margin-bottom: 30px;
     }
 
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       padding: 30px 0;
       border-top: 1px solid rgba(255,255,255,0.07);
       color: #718096;
       text-align: center;
     }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
 
     @media (max-width: 1050px) {
       .pricing {
@@ -436,6 +468,7 @@
     }
 
     @media (max-width: 800px) {
+
       .nav-links {
         display: none;
       }
@@ -460,34 +493,74 @@
       .contact-box h2 {
         font-size: 35px;
       }
+
+      section {
+        padding: 75px 0;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- =========================
+       CABECERA
+  ========================= -->
+
   <header>
     <div class="container">
+
       <nav>
+
         <a href="#" class="logo">
           <span class="logo-icon">N</span>
           NEXORA
         </a>
 
         <ul class="nav-links">
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#precios">Precios</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+
+          <li>
+            <a href="#servicios">
+              Servicios
+            </a>
+          </li>
+
+          <li>
+            <a href="#precios">
+              Precios
+            </a>
+          </li>
+
+          <li>
+            <a href="#nosotros">
+              Nosotros
+            </a>
+          </li>
+
+          <li>
+            <a href="#contacto">
+              Contacto
+            </a>
+          </li>
+
         </ul>
+
       </nav>
+
     </div>
   </header>
 
+
   <main>
 
+    <!-- =========================
+         HERO
+    ========================= -->
+
     <section class="hero">
+
       <div class="container">
+
         <div class="hero-content">
 
           <span class="eyebrow">
@@ -496,109 +569,212 @@
 
           <h1>
             Tecnología que
-            <span class="gradient">impulsa tu negocio.</span>
+            <span class="gradient">
+              impulsa tu negocio.
+            </span>
           </h1>
 
           <p>
             En NEXORA desarrollamos soluciones tecnológicas modernas
-            para ayudar a empresas y profesionales a crecer, automatizar
-            procesos y proteger su negocio.
+            para ayudar a empresas y profesionales a crecer,
+            automatizar procesos y proteger su negocio.
           </p>
 
           <div class="buttons">
-            <a href="#contacto" class="btn btn-primary">
+
+            <a
+              href="#contacto"
+              class="btn btn-primary"
+            >
               Hablemos de tu proyecto
             </a>
 
-            <a href="#servicios" class="btn btn-secondary">
+            <a
+              href="#servicios"
+              class="btn btn-secondary"
+            >
               Ver servicios
             </a>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
+
+    <!-- =========================
+         SERVICIOS
+    ========================= -->
+
     <section id="servicios">
+
       <div class="container">
 
         <div class="section-title">
-          <h2>Nuestros servicios</h2>
-          <p>Tecnología diseñada para las necesidades reales de tu negocio.</p>
+
+          <h2>
+            Nuestros servicios
+          </h2>
+
+          <p>
+            Tecnología diseñada para las necesidades reales de tu negocio.
+          </p>
+
         </div>
+
 
         <div class="services">
 
           <div class="card">
-            <div class="icon">🌐</div>
-            <h3>Diseño y desarrollo web</h3>
+
+            <div class="icon">
+              🌐
+            </div>
+
+            <h3>
+              Diseño y desarrollo web
+            </h3>
+
             <p>
-              Creamos páginas web modernas, rápidas, adaptadas a móviles
-              y orientadas a conseguir resultados.
+              Creamos páginas web modernas, rápidas,
+              adaptadas a móviles y orientadas a conseguir resultados.
             </p>
+
           </div>
 
+
           <div class="card">
-            <div class="icon">🛡️</div>
-            <h3>Ciberseguridad</h3>
+
+            <div class="icon">
+              🛡️
+            </div>
+
+            <h3>
+              Ciberseguridad
+            </h3>
+
             <p>
               Protección, análisis y buenas prácticas para reducir
               riesgos y proteger la información de tu empresa.
             </p>
+
           </div>
 
+
           <div class="card">
-            <div class="icon">🤖</div>
-            <h3>Inteligencia artificial</h3>
+
+            <div class="icon">
+              🤖
+            </div>
+
+            <h3>
+              Inteligencia artificial
+            </h3>
+
             <p>
-              Incorporamos IA en procesos y herramientas para mejorar
-              productividad y ahorrar tiempo.
+              Incorporamos IA en procesos y herramientas
+              para mejorar productividad y ahorrar tiempo.
             </p>
+
           </div>
 
+
           <div class="card">
-            <div class="icon">⚡</div>
-            <h3>Automatización</h3>
+
+            <div class="icon">
+              ⚡
+            </div>
+
+            <h3>
+              Automatización
+            </h3>
+
             <p>
-              Automatizamos tareas repetitivas para que puedas dedicar
-              más tiempo a lo realmente importante.
+              Automatizamos tareas repetitivas para que puedas
+              dedicar más tiempo a lo realmente importante.
             </p>
+
           </div>
 
+
           <div class="card">
-            <div class="icon">💻</div>
-            <h3>Soporte informático</h3>
+
+            <div class="icon">
+              💻
+            </div>
+
+            <h3>
+              Soporte informático
+            </h3>
+
             <p>
               Asistencia técnica para ordenadores, sistemas,
               aplicaciones y problemas tecnológicos.
             </p>
+
           </div>
 
+
           <div class="card">
-            <div class="icon">🔗</div>
-            <h3>Redes y sistemas</h3>
+
+            <div class="icon">
+              🔗
+            </div>
+
+            <h3>
+              Redes y sistemas
+            </h3>
+
             <p>
-              Configuración y mantenimiento de redes, servidores,
-              conectividad y sistemas informáticos.
+              Configuración y mantenimiento de redes,
+              servidores, conectividad y sistemas informáticos.
             </p>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
+
+    <!-- =========================
+         PRECIOS
+    ========================= -->
+
     <section id="precios">
+
       <div class="container">
 
         <div class="section-title">
-          <h2>Planes NEXORA</h2>
-          <p>Soporte, tecnología y soluciones digitales adaptadas a tu negocio.</p>
+
+          <h2>
+            Planes NEXORA
+          </h2>
+
+          <p>
+            Soporte, tecnología y soluciones digitales
+            adaptadas a tu negocio.
+          </p>
+
         </div>
+
 
         <div class="pricing">
 
+
+          <!-- START -->
+
           <div class="pricing-card">
-            <h3>🟢 NEXORA START</h3>
+
+            <h3>
+              🟢 NEXORA START
+            </h3>
+
             <p class="pricing-description">
               Para autónomos y pequeños negocios.
             </p>
@@ -607,27 +783,61 @@
               39 € <span>/mes</span>
             </div>
 
-            <div class="annual">390 €/año</div>
+            <div class="annual">
+              390 €/año
+            </div>
 
             <ul class="pricing-list">
-              <li>✓ Soporte técnico remoto</li>
-              <li>✓ Resolución de incidencias</li>
-              <li>✓ Asesoramiento informático</li>
-              <li>✓ Mantenimiento básico</li>
-              <li>✓ Optimización de equipos</li>
-              <li>✓ Asistencia técnica</li>
+
+              <li>
+                ✓ Soporte técnico remoto
+              </li>
+
+              <li>
+                ✓ Resolución de incidencias
+              </li>
+
+              <li>
+                ✓ Asesoramiento informático
+              </li>
+
+              <li>
+                ✓ Mantenimiento básico
+              </li>
+
+              <li>
+                ✓ Optimización de equipos
+              </li>
+
+              <li>
+                ✓ Asistencia técnica
+              </li>
+
             </ul>
 
-            <a href="#contacto" class="btn btn-secondary pricing-btn">
+            <a
+              href="https://wa.me/34677367321?text=Hola%20NEXORA,%20estoy%20interesado%20en%20el%20plan%20START%20de%2039%20%E2%82%AC%20al%20mes."
+              class="btn btn-secondary pricing-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Elegir Start
             </a>
+
           </div>
+
+
+          <!-- PRO -->
 
           <div class="pricing-card featured">
 
-            <span class="popular">MÁS ELEGIDO</span>
+            <span class="popular">
+              MÁS ELEGIDO
+            </span>
 
-            <h3>🔵 NEXORA PRO</h3>
+            <h3>
+              🔵 NEXORA PRO
+            </h3>
 
             <p class="pricing-description">
               La opción ideal para pequeños negocios.
@@ -637,26 +847,61 @@
               69 € <span>/mes</span>
             </div>
 
-            <div class="annual">690 €/año</div>
+            <div class="annual">
+              690 €/año
+            </div>
 
             <ul class="pricing-list">
-              <li>✓ Todo lo incluido en START</li>
-              <li>✓ Mantenimiento preventivo</li>
-              <li>✓ Configuración y optimización</li>
-              <li>✓ Copias de seguridad</li>
-              <li>✓ Seguridad informática básica</li>
-              <li>✓ Soporte prioritario</li>
-              <li>✓ Asesoramiento tecnológico</li>
+
+              <li>
+                ✓ Todo lo incluido en START
+              </li>
+
+              <li>
+                ✓ Mantenimiento preventivo
+              </li>
+
+              <li>
+                ✓ Configuración y optimización
+              </li>
+
+              <li>
+                ✓ Copias de seguridad
+              </li>
+
+              <li>
+                ✓ Seguridad informática básica
+              </li>
+
+              <li>
+                ✓ Soporte prioritario
+              </li>
+
+              <li>
+                ✓ Asesoramiento tecnológico
+              </li>
+
             </ul>
 
-            <a href="#contacto" class="btn btn-primary pricing-btn">
+            <a
+              href="https://wa.me/34677367321?text=Hola%20NEXORA,%20estoy%20interesado%20en%20el%20plan%20PRO%20de%2069%20%E2%82%AC%20al%20mes."
+              class="btn btn-primary pricing-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Elegir Pro
             </a>
+
           </div>
+
+
+          <!-- BUSINESS -->
 
           <div class="pricing-card">
 
-            <h3>🟣 NEXORA BUSINESS</h3>
+            <h3>
+              🟣 NEXORA BUSINESS
+            </h3>
 
             <p class="pricing-description">
               Para empresas con mayores necesidades tecnológicas.
@@ -666,26 +911,61 @@
               119 € <span>/mes</span>
             </div>
 
-            <div class="annual">1.190 €/año</div>
+            <div class="annual">
+              1.190 €/año
+            </div>
 
             <ul class="pricing-list">
-              <li>✓ Todo lo incluido en PRO</li>
-              <li>✓ Gestión y mantenimiento de redes</li>
-              <li>✓ Mantenimiento web básico</li>
-              <li>✓ Automatización de tareas</li>
-              <li>✓ Soluciones con Inteligencia Artificial</li>
-              <li>✓ Supervisión tecnológica</li>
-              <li>✓ Consultoría informática</li>
+
+              <li>
+                ✓ Todo lo incluido en PRO
+              </li>
+
+              <li>
+                ✓ Gestión y mantenimiento de redes
+              </li>
+
+              <li>
+                ✓ Mantenimiento web básico
+              </li>
+
+              <li>
+                ✓ Automatización de tareas
+              </li>
+
+              <li>
+                ✓ Soluciones con Inteligencia Artificial
+              </li>
+
+              <li>
+                ✓ Supervisión tecnológica
+              </li>
+
+              <li>
+                ✓ Consultoría informática
+              </li>
+
             </ul>
 
-            <a href="#contacto" class="btn btn-secondary pricing-btn">
+            <a
+              href="https://wa.me/34677367321?text=Hola%20NEXORA,%20estoy%20interesado%20en%20el%20plan%20BUSINESS%20de%20119%20%E2%82%AC%20al%20mes."
+              class="btn btn-secondary pricing-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Elegir Business
             </a>
+
           </div>
+
+
+          <!-- PREMIUM -->
 
           <div class="pricing-card">
 
-            <h3>⭐ NEXORA PREMIUM</h3>
+            <h3>
+              ⭐ NEXORA PREMIUM
+            </h3>
 
             <p class="pricing-description">
               Soporte tecnológico integral para tu empresa.
@@ -695,33 +975,71 @@
               199 € <span>/mes</span>
             </div>
 
-            <div class="annual">1.990 €/año</div>
+            <div class="annual">
+              1.990 €/año
+            </div>
 
             <ul class="pricing-list">
-              <li>✓ Todo lo incluido en BUSINESS</li>
-              <li>✓ Soporte prioritario</li>
-              <li>✓ Mantenimiento integral</li>
-              <li>✓ Gestión de sistemas y equipos</li>
-              <li>✓ Seguridad informática avanzada</li>
-              <li>✓ Automatizaciones personalizadas</li>
-              <li>✓ Soluciones de IA para empresas</li>
-              <li>✓ Consultoría tecnológica personalizada</li>
+
+              <li>
+                ✓ Todo lo incluido en BUSINESS
+              </li>
+
+              <li>
+                ✓ Soporte prioritario
+              </li>
+
+              <li>
+                ✓ Mantenimiento integral
+              </li>
+
+              <li>
+                ✓ Gestión de sistemas y equipos
+              </li>
+
+              <li>
+                ✓ Seguridad informática avanzada
+              </li>
+
+              <li>
+                ✓ Automatizaciones personalizadas
+              </li>
+
+              <li>
+                ✓ Soluciones de IA para empresas
+              </li>
+
+              <li>
+                ✓ Consultoría tecnológica personalizada
+              </li>
+
             </ul>
 
-            <a href="#contacto" class="btn btn-secondary pricing-btn">
+            <a
+              href="https://wa.me/34677367321?text=Hola%20NEXORA,%20estoy%20interesado%20en%20el%20plan%20PREMIUM%20de%20199%20%E2%82%AC%20al%20mes."
+              class="btn btn-secondary pricing-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Elegir Premium
             </a>
+
           </div>
 
         </div>
 
+
+        <!-- SERVICIOS PUNTUALES -->
+
         <div class="one-off">
 
-          <h3>Servicios puntuales</h3>
+          <h3>
+            Servicios puntuales
+          </h3>
 
           <p>
-            ¿No necesitas una cuota mensual? También puedes contratar
-            servicios individuales.
+            ¿No necesitas una cuota mensual?
+            También puedes contratar servicios individuales.
           </p>
 
           <div class="one-off-grid">
@@ -759,10 +1077,17 @@
             </div>
 
           </div>
+
         </div>
 
       </div>
+
     </section>
+
+
+    <!-- =========================
+         NOSOTROS
+    ========================= -->
 
     <section id="nosotros">
 
@@ -792,26 +1117,58 @@
 
           </div>
 
+
           <div class="features">
 
             <div class="feature">
-              <strong>✓ Soluciones adaptadas</strong><br>
+
+              <strong>
+                ✓ Soluciones adaptadas
+              </strong>
+
+              <br>
+
               Cada proyecto parte de las necesidades reales del cliente.
+
             </div>
 
+
             <div class="feature">
-              <strong>✓ Comunicación clara</strong><br>
+
+              <strong>
+                ✓ Comunicación clara
+              </strong>
+
+              <br>
+
               Tecnología explicada de forma sencilla y transparente.
+
             </div>
 
+
             <div class="feature">
-              <strong>✓ Diseño moderno</strong><br>
+
+              <strong>
+                ✓ Diseño moderno
+              </strong>
+
+              <br>
+
               Experiencias digitales preparadas para móvil y ordenador.
+
             </div>
 
+
             <div class="feature">
-              <strong>✓ Seguridad</strong><br>
+
+              <strong>
+                ✓ Seguridad
+              </strong>
+
+              <br>
+
               La seguridad forma parte del proyecto desde el principio.
+
             </div>
 
           </div>
@@ -821,6 +1178,11 @@
       </div>
 
     </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================= -->
 
     <section id="contacto">
 
@@ -837,11 +1199,12 @@
           </h2>
 
           <p>
-            Cuéntanos qué necesitas y estudiaremos cómo podemos ayudarte.
+            Cuéntanos qué necesitas y estudiaremos
+            cómo podemos ayudarte.
           </p>
 
           <a
-            href="https://wa.me/34677367321?text=Hola%20NEXORA,%20quiero%20información%20sobre%20vuestros%20servicios."
+            href="https://wa.me/34677367321?text=Hola%20NEXORA,%20quiero%20informaci%C3%B3n%20sobre%20vuestros%20servicios."
             class="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"
@@ -857,10 +1220,17 @@
 
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
 
     <div class="container">
+
       © 2026 NEXORA · Tecnología que impulsa tu negocio.
+
     </div>
 
   </footer>
